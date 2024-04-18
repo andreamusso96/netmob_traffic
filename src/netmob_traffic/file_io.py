@@ -5,10 +5,17 @@ import xarray as xr
 
 from .enums import City, Service, TrafficType
 
-data_dir = os.getenv('DATA_DIR')
 
+data_dir = None
+
+def initialize_data_directory(folder: str):
+    global data_dir
+    data_dir = folder
+    if not os.path.exists(data_dir):
+        raise FileNotFoundError(f'Data directory {data_dir} does not exist')
 
 def get_mobile_traffic_data_file_path(traffic_type: TrafficType, city: City, service: Service, day: date):
+    assert data_dir is not None, 'Data directory not initialized, call initialize_data_directory before using this function'
     day_str = day.strftime('%Y%m%d')
     path = f'{data_dir}/tile/{city.value}/{service.value}/{day_str}/'
     file_name = f'{city.value}_{service.value}_{day_str}_{traffic_type.value}.txt'
@@ -17,6 +24,7 @@ def get_mobile_traffic_data_file_path(traffic_type: TrafficType, city: City, ser
 
 
 def get_geo_data_file_path(city: City) -> str:
+    assert data_dir is not None, 'Data directory not initialized, call initialize_data_directory before using this function'
     return f'{data_dir}/{city.value}.geojson'
 
 
