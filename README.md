@@ -1,7 +1,11 @@
 # Netmob traffic data
 
-This package has essentially two main goals. First, abstract away the process of loading the netmob traffic data into an xarray object. 
-Second, provide enums for the different dimensions of the netmob traffic data.
+This package provide basic infrastructure to work with the netmob traffic dataset.
+This dataset was released as part of the [NetMob Data Challenge 2023](https://netmob2023challenge.networks.imdea.org/) 
+
+The package contains essentially two scripts:
+1. The first script abstract away the process of loading the netmob traffic data into and xarray object. 
+2. The second script provides enumerations (Enum) for the different dimensions of the netmob traffic data.
 
 ## Installation
 
