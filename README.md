@@ -27,13 +27,14 @@ import netmob_traffic as nt
 nt.initialize_data_directory('/path/to/data')
 ```
 ### Enums
-The package contains various enums to facilitate life when dealing with the data the most important ones are
+The package contains various enums to facilitate life when dealing with the data. 
+The most important ones are
 ```python
 nt.City # Enum for the different cities in the data
 nt.TrafficType # Enum for the different traffic types in the data (Uplink, Downlink, Both)
 nt.Service # Enum for the different services in the data
 ```
-The ```TimeOptions``` class contains method ```get_days``` and ```get_times``` that can be used to get the days for which data is available.
+On top of these enums the ```TimeOptions``` class contains method ```get_days``` and ```get_times``` that can be used to get the days and times for which data is available.
 
 ### Loading data
 You can load the data for paris for both uplink and downlink traffic for the services facebook and youtube for all days as follows:
