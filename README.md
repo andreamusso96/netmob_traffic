@@ -48,5 +48,5 @@ data = nt.load_traffic_data_city(city=nt.City.PARIS, traffic_type=nt.TrafficType
 ```
 You can load the tile geojon data in a similar fashion
 ```python
-nt.load_tile_geojon_data_city(city=nt.City.PARIS)
+nt.load_tile_geo_data_city(city=nt.City.PARIS)
 ```
