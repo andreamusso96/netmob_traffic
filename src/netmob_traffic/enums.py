@@ -122,12 +122,6 @@ class Service(Enum):
     def get_services(traffic_type: TrafficType = None, service_type: ServiceType = None, return_values=False):
         assert traffic_type is not None or service_type is not None, 'Either traffic_type or service_type must be set'
 
-        if service_type is None:
-            if traffic_type == TrafficType.USERS:
-                service_type = ServiceType.ENTERTAINMENT
-            else:
-                service_type = ServiceType.ALL
-
         if service_type == ServiceType.ENTERTAINMENT:
             services = [service for service in Service if Service.is_entertainment_service(service)]
         elif service_type == ServiceType.ALL:

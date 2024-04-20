@@ -5,14 +5,15 @@ import xarray as xr
 
 from .enums import City, Service, TrafficType
 
-
 data_dir = None
+
 
 def initialize_data_directory(folder: str):
     global data_dir
     data_dir = folder
     if not os.path.exists(data_dir):
         raise FileNotFoundError(f'Data directory {data_dir} does not exist')
+
 
 def get_mobile_traffic_data_file_path(traffic_type: TrafficType, city: City, service: Service, day: date):
     assert data_dir is not None, 'Data directory not initialized, call initialize_data_directory before using this function'

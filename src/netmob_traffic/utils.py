@@ -52,6 +52,7 @@ class Anomalies:
                          date(2019, 5, 22), date(2019, 5, 23), date(2019, 5, 24), date(2019, 5, 25)]
         return anomaly_dates
 
+
 class CityDimensions:
     city_dims = {
         'Bordeaux': (334, 342),
