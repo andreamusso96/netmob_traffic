@@ -9,18 +9,10 @@ The package contains essentially two scripts:
 
 ## Installation
 
-To install the package just clone the repostiory on your computer running
+To install the package just run
 ```bash
-git clone https://github.com/andreamusso96/netmob_traffic.git
+pip install git+https://github.com/andreamusso96/netmob_traffic.git
 ```
-
-Then navigate to the directory and run
-```bash
-pip install -e .
-```
-The -e flag is used to install the package in editable mode, so that you can modify the code and see the changes without having to reinstall the package.
-If you do not want to edit the package you can just remove the -e flag.
-
 
 ## Usage
 ### Initialization
